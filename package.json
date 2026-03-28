@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "echo 'No build step required'",
     "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
     "express": "^4.18.2"
