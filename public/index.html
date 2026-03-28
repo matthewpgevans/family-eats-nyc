@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Eats NYC</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🍕</div>
+    <div class="logo-text">
+      <h1>Family Eats NYC</h1>
+      <p>100 kid-friendly restaurants, all bookable on Resy</p>
+    </div>
+  </div>
+  <div class="filters">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="kids-menu">Kids Menu</button>
+    <button class="filter-btn" data-filter="high-chairs">High Chairs</button>
+    <button class="filter-btn" data-filter="quiet">Quieter</button>
+    <button class="filter-btn" data-filter="brooklyn">Brooklyn</button>
+    <input class="search-box" type="text" placeholder="Search name, area, cuisine..." id="searchInput" />
+  </div>
+  <div class="resy-badge-header"><div class="resy-dot"></div>Bookable on Resy</div>
+</header>
+
+<main>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <strong id="result-count">Loading...</strong>
+      <span>Ranked by kid-friendliness</span>
+    </div>
+    <div class="restaurant-list" id="restaurantList">
+      <div class="loading">Loading</div>
+    </div>
+  </aside>
+  <div id="map"></div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
