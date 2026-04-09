@@ -1,0 +1,236 @@
+
+<style>
+  .prd { font-family: var(--font-sans); max-width: 860px; padding: 1.5rem 0; }
+  .section { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
+  .section-num { width: 26px; height: 26px; border-radius: 50%; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: var(--color-text-secondary); flex-shrink: 0; }
+  .section-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .hint { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 0.6rem; font-style: italic; }
+  .field { margin-bottom: 0.9rem; }
+  .field-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .field-box { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 0.6rem 0.75rem; font-size: 13px; color: var(--color-text-tertiary); min-height: 36px; }
+  .field-box.tall { min-height: 60px; }
+  .field-box.taller { min-height: 80px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; padding: 3px 10px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); background: var(--color-background-secondary); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+  .badge-info { background: var(--color-background-info); color: var(--color-text-info); }
+  .badge-warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .badge-success { background: var(--color-background-success); color: var(--color-text-success); }
+  .doc-header { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .doc-title { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .doc-meta { font-size: 13px; color: var(--color-text-secondary); }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0.75rem 0; }
+  .priority-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .priority-cell { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 0.5rem 0.75rem; font-size: 12px; }
+  .priority-cell .label { color: var(--color-text-tertiary); margin-bottom: 2px; }
+  .priority-cell .value { color: var(--color-text-secondary); }
+</style>
+<div class="prd">
+  <div class="doc-header">
+    <p class="doc-title">Product Requirements Document</p>
+    <p class="doc-meta">Parent-friendly NYC dining directory &nbsp;·&nbsp; Fill this out, then paste into Claude Code</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <span class="section-title">Overview</span>
+    </div>
+    <p class="hint">One paragraph — what the product is and why it exists.</p>
+    <div class="field">
+      <div class="field-label">Product name</div>
+      <div class="field-box">e.g. "TableTot", "Family Eats NYC"…</div>
+    </div>
+    <div class="field">
+      <div class="field-label">One-line description</div>
+      <div class="field-box">Help parents in NYC find restaurants where dining with kids is actually enjoyable.</div>
+    </div>
+    <div class="field">
+      <div class="field-label">Problem being solved</div>
+      <div class="field-box tall">Parents waste time searching Yelp/Google only to arrive and find no high chairs, loud adults-only vibes, or 45-min waits. There's no trusted source that filters by family-specific signals.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <span class="section-title">Target users</span>
+    </div>
+    <p class="hint">Who are you building for? Be specific — age of kids matters.</p>
+    <div class="two-col">
+      <div class="field">
+        <div class="field-label">Primary user</div>
+        <div class="field-box tall">NYC parents with kids 0–8 years old. Busy, time-poor, skew millennial. Rely on their phone for decisions.</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Secondary user</div>
+        <div class="field-box tall">Grandparents visiting, nannies, or out-of-town family planning a NYC meal with kids in tow.</div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label">User pain points</div>
+      <div class="field-box tall">No high chairs · Loud/unsuitable atmosphere · Unhealthy or no kids menu · No stroller access · Can't filter by neighborhood</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <span class="section-title">Core features (v1)</span>
+      <span class="badge badge-info">Must-haves</span>
+    </div>
+    <p class="hint">The minimum set of features for a working MVP. Rank them.</p>
+    <div class="priority-grid">
+      <div class="priority-cell">
+        <div class="label">P0 — launch blockers</div>
+        <div class="value">Restaurant listings · Family-friendly filters · Neighborhood search</div>
+      </div>
+      <div class="priority-cell">
+        <div class="label">P1 — high value</div>
+        <div class="value">Rating/review summaries · Map view · Saved favorites</div>
+      </div>
+      <div class="priority-cell">
+        <div class="label">P2 — nice to have</div>
+        <div class="value">User-submitted reviews · Reservation links · "Near me" GPS</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="field">
+      <div class="field-label">Family-specific filter ideas</div>
+      <div class="tag-row">
+        <span class="tag">High chairs</span>
+        <span class="tag">Stroller-accessible</span>
+        <span class="tag">Kids menu</span>
+        <span class="tag">Outdoor seating</span>
+        <span class="tag">Noise level</span>
+        <span class="tag">Changing table</span>
+        <span class="tag">Wait time</span>
+        <span class="tag">Price range</span>
+        <span class="tag">Cuisine</span>
+        <span class="tag">Open Sunday brunch</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <span class="section-title">Pages & navigation</span>
+    </div>
+    <p class="hint">List every screen/page. Claude Code will scaffold one file per page.</p>
+    <div class="field">
+      <div class="field-label">Pages to build</div>
+      <div class="field-box taller">
+        / — Homepage (hero + search bar + featured picks)<br>
+        /search — Results with filters sidebar<br>
+        /restaurant/[id] — Detail page (photos, info, reviews)<br>
+        /neighborhoods — Browse by area (list or map)<br>
+        /about — Optional
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label">Navigation style</div>
+      <div class="field-box">Top nav bar &nbsp;/&nbsp; Bottom tab bar (mobile) &nbsp;/&nbsp; Sidebar — pick one</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <span class="section-title">Data & content</span>
+    </div>
+    <p class="hint">Where does restaurant data come from? This affects Claude Code's architecture choices.</p>
+    <div class="two-col">
+      <div class="field">
+        <div class="field-label">Data source</div>
+        <div class="field-box tall">Google Places API · Yelp Fusion API · Static JSON file (for MVP) · Airtable · Supabase — pick one</div>
+      </div>
+      <div class="field">
+        <div class="field-label">How family filters get applied</div>
+        <div class="field-box tall">Manual tagging by curator · User-submitted · AI-inferred from reviews · API attributes (e.g. Google "goodForGroups")</div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label">Initial number of restaurants</div>
+      <div class="field-box">e.g. 50 hand-curated listings at launch, growing via user submissions</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <span class="section-title">Tech stack</span>
+      <span class="badge badge-warn">Tell Claude Code this</span>
+    </div>
+    <p class="hint">Claude Code will match its output to whatever you specify here.</p>
+    <div class="two-col">
+      <div class="field">
+        <div class="field-label">Frontend framework</div>
+        <div class="field-box">Next.js (recommended) · Remix · plain React · Vue</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Styling</div>
+        <div class="field-box">Tailwind CSS · CSS Modules · Styled Components</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Backend / database</div>
+        <div class="field-box">Supabase · Firebase · Airtable · None (static site)</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Deployment target</div>
+        <div class="field-box">Vercel · Netlify · AWS · Not sure yet</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <span class="section-title">Design direction</span>
+    </div>
+    <p class="hint">Mood, color palette, and feel. Include reference sites if you have them.</p>
+    <div class="two-col">
+      <div class="field">
+        <div class="field-label">Visual vibe</div>
+        <div class="field-box">Warm + friendly · Minimal + modern · Colorful + playful · Other</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Brand colors (hex or description)</div>
+        <div class="field-box">e.g. warm orange + cream, or "like Wirecutter but friendlier"</div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label">Reference sites / inspiration</div>
+      <div class="field-box">e.g. theinfatuation.com for tone, eater.com for layout, timeout.com/newyork for browse UX</div>
+    </div>
+    <div class="field">
+      <div class="field-label">Mobile-first?</div>
+      <div class="field-box">Yes — most parents search on their phone while out · No — desktop-first is fine</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <span class="section-title">Success metrics</span>
+      <span class="badge badge-success">Optional but useful</span>
+    </div>
+    <p class="hint">How will you know v1 worked?</p>
+    <div class="field">
+      <div class="field-box tall">e.g. 500 unique visitors in month 1 · avg session &gt; 2 min · 20% return visit rate · 50 saved favorites · featured in a NYC parenting newsletter</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <span class="section-title">Out of scope (v1)</span>
+    </div>
+    <p class="hint">Being explicit about what you're NOT building saves hours of scope creep.</p>
+    <div class="field">
+      <div class="field-box tall">User accounts / auth · User-generated reviews · Booking/reservation system · Push notifications · iOS/Android native app · Content for outside NYC</div>
+    </div>
+  </div>
+</div>

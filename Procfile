@@ -1,1 +1,1 @@
-web: node server.js
+web: npm run build && npx next start -p $PORT
